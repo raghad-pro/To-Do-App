@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(194, 54, 222);
+}
+#hero .container {
+  margin: auto;
+  padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
+}
+#hero .container h1 {
+  margin: 10px;
+}
+#hero .container p.error {
+  color: red;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  margin-left: 10px;
+  display: none;
+}
+#hero .container p.error.show {
+  display: block;
+}
+#hero .container input,
+#hero .container button,
+#hero .container .results .result-box {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  outline: none;
+  border-radius: 10px;
+}
+#hero .container input {
+  border: 1px solid #eee;
+}
+#hero .container button {
+  border: none;
+  background-color: rgb(176, 11, 195);
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#hero .container button:hover {
+  background-color: rgba(177, 11, 195, 0.874);
+}
+#hero .container .results .result-box {
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#hero .container .results .result-box .task {
+  display: flex;
+  align-items: center;
+}
+#hero .container .results .result-box .task input,
+#hero .container .results .result-box .task span{
+  width: fit-content;
+}
+#hero .container .results .result-box .task input:checked + span {
+  color: gray;
+  text-decoration: line-through;
+}
+#hero .container .results .result-box .btns span {
+  width: fit-content;
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 5px;
+}
+#hero .container .results .result-box .btns span:first-child {
+  background-color: rgb(196, 23, 215);
+}
+#hero .container .results .result-box .btns span:first-child:hover {
+  background-color: rgba(196, 23, 215, 0.87);
+}
+#hero .container .results .result-box .btns span:last-child {
+  background-color: red;
+}
+#hero .container .results .result-box .btns span:last-child:hover {
+  background-color: rgba(255, 0, 0, 0.81);
+}
+#hero .container .results .result-box .btns span.green {
+  background-color: green;
+}
+#hero .container .results .result-box .btns span.green:hover {
+  background-color: rgba(0, 128, 0, 0.848);
+}
+#hero .container .pajnation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+#hero .container .pajnation button {
+  width: fit-content;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: none;
+  background-color: #eee;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+}
+#hero .container .pajnation button.active {
+  background-color: rgb(176, 11, 195);
+}
+
+#hero .container .pajnation button.active:hover {
+  background-color: rgba(177, 11, 195, 0.879);
+}
+@media (max-width: 786px) {
+  #hero .container {
+    width: 350px;
+  }
+}

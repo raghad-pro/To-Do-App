@@ -77,6 +77,7 @@ function addResultBox() {
         p.querySelector("input").focus();
       } else {
         let inputEditing = p.querySelector("input");
+        inputEditing.style.width = "100%";
         if (inputEditing.value.trim() === "") {
           errorMassage("task can not be empty");
         } else {

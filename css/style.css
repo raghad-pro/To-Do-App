@@ -72,10 +72,18 @@ body {
 #hero .container .results .result-box .task {
   display: flex;
   align-items: center;
+  width: 70%;
+  gap: 10px;
+  text-align: left;
 }
-#hero .container .results .result-box .task input,
-#hero .container .results .result-box .task span{
+#hero .container .results .result-box .task input[type="checkbox"] {
   width: fit-content;
+}
+#hero .container .results .result-box .task span {
+  flex: 1;
+  word-break: break-all;
+  display: block;
+  margin: 0;
 }
 #hero .container .results .result-box .task input:checked + span {
   color: gray;
@@ -113,6 +121,8 @@ body {
   justify-content: center;
   align-items: center;
   margin: 20px 0;
+      flex-wrap: wrap;
+    gap: 10px;
 }
 #hero .container .pajnation button {
   width: fit-content;
@@ -135,5 +145,12 @@ body {
 @media (max-width: 786px) {
   #hero .container {
     width: 350px;
+  }
+  #hero .container .results .result-box {
+    flex-direction: column;
+  }
+  #hero .container .results .result-box .task {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
